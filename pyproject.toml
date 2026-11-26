@@ -8,15 +8,17 @@ version_scheme = "post-release"
 local_scheme = "node-and-date"
 
 [project]
-name = "wise"
+name = "wildfires"
 dynamic = [
   "version"
 ]
 authors = [
   { name="Joonas Kolstela", email="joonas.kolstela@fmi.fi" },
+  { name="Suraj Polade", email="suraj.polade@fmi.fi" },
+
 ]
-description = "WISE"
-readme = "README.txt"
+description = "ClimateDT wildfires application"
+readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -33,7 +35,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Joonasko/WISE"
+Homepage = "https://github.com/Joonasko/ClimateDT_wildfires"
 
 [project.scripts]
 run_wise = "wise.run_wise:main"
