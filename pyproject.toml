@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# Default versioning behavior, use the version tag from Git
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+
+[project]
+name = "wise"
+dynamic = [
+  "version"
+]
+authors = [
+  { name="Joonas Kolstela", email="joonas.kolstela@fmi.fi" },
+]
+description = "WISE"
+readme = "README.txt"
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "xarray",
+  "netcdf4",
+  "geopandas",
+  "rasterio",
+  "dask",
+  "tzdata"
+]
+
+[project.urls]
+Homepage = "https://github.com/Joonasko/WISE"
+
+[project.scripts]
+run_wise = "wise.run_wise:main"
+run_wildfires_fwi = "fwi.run_wildfires_fwi:main"
